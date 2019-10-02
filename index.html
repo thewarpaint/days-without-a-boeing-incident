@@ -1,0 +1,117 @@
+---
+permalink: /
+---
+{%- assign postTitle = "Días sin @channel innecesarios en #general" -%}
+{%- assign lastAtChannel = "2019-10-01" -%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="{{ postTitle }}">
+
+    <title>{{ postTitle }}</title>
+
+    <!-- Twitter meta tags, missing: twitter:description, twitter:site -->
+    <meta name="twitter:card"
+          content="summary">
+    <meta name="twitter:title"
+          content="{{ postTitle }}: 0">
+    <!-- <meta name="twitter:image"
+          content="{{ site.url }}/assets/images/..."> -->
+
+    <!-- Open Graph (Facebook) meta tags -->
+    <meta property="og:title"
+          content="{{ postTitle }}: 0">
+    <meta property="og:type"
+          content="article">
+    <meta property="og:url"
+          content="https://thewarpaint.github.io/diassinarrobachannelengeneral">
+    <!-- <meta property="og:image"
+          content="{{ site.url }}/assets/images/..."> -->
+
+    <style type="text/css">
+      html {
+        font-size: 12px;
+      }
+
+      @media(min-width: 640px) {
+        html {
+          font-size: 16px;
+        }
+      }
+
+      body {
+        background-color: #fd7177;
+        color: white;
+        margin: 1rem;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+      }
+
+      /* Global */
+      .main {
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .header {
+        margin: 0;
+        font-size: 2rem;
+        font-size: 7.5vh;
+        line-height: 7.5vh;
+        font-weight: 200;
+      }
+
+      .days {
+        margin: 0;
+        font-size: 8rem;
+        font-size: 75vh;
+        line-height: 75vh;
+        font-weight: 700;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var lastAtChannel = "{{ lastAtChannel }}";
+
+      function getDiffInDaysFromNow(date) {
+        var differenceMs = new Date().getTime() - date.getTime();
+
+        if (differenceMs < 0) {
+          return 0;
+        }
+
+        return Math.floor(differenceMs / (1000 * 60 * 60 * 24));
+      }
+
+      function getDateObjectFromString(dateString) {
+        var dateParts = dateString.split('-');
+
+        return new Date(
+          parseInt(dateParts[0], 10),
+          parseInt(dateParts[1], 10) - 1,
+          parseInt(dateParts[2], 10),
+        );
+      }
+
+      function updateDays(days) {
+        document.getElementById('days').textContent = days;
+      }
+
+      document.addEventListener('DOMContentLoaded', function (event) {
+        var days = getDiffInDaysFromNow(getDateObjectFromString(lastAtChannel));
+
+        updateDays(days);
+      });
+    </script>
+  </head>
+
+  <body>
+    <section class="main">
+      <h1 class="header">{{ postTitle }}:</h1>
+
+      <h2 id="days"
+          class="days">0</h2>
+    </section>
+  </body>
+</html>
