@@ -3,13 +3,14 @@ permalink: /
 ---
 {%- assign postTitle = "Días sin @channel innecesarios en #general" -%}
 {%- assign lastAtChannel = "2019-10-03" -%}
+{%- assign notifiedPeople = "3,850" -%}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="{{ postTitle }}">
-    <meta name="description" content="Último incidente: {{ lastAtChannel }}">
+    <meta name="description" content="Último incidente: {{ lastAtChannel }}, personas notificadas: {{ notifiedPeople }}">
     <meta name="theme-color" content="#fd7177">
 
     <title>{{ postTitle }}</title>
@@ -56,7 +57,8 @@ permalink: /
         text-align: center;
       }
 
-      .header {
+      .header,
+      .footer {
         margin: 0;
         font-size: 2rem;
         font-size: 7.5vh;
@@ -114,6 +116,8 @@ permalink: /
 
       <h2 id="days"
           class="days">0</h2>
+      
+      <footer class="footer">{{ notifiedPeople }} personas notificadas</footer>
     </section>
   </body>
 </html>
