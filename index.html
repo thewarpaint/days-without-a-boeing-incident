@@ -1,9 +1,8 @@
 ---
 permalink: /
 ---
-{%- assign postTitle = "Días sin @channel o @here innecesarios en #general" -%}
-{%- assign lastAtChannel = "2020-04-03" -%}
-{%- assign notifiedPeople = "4,872" -%}
+{%- assign postTitle = "Days without a Boeing incident" -%}
+{%- assign lastIncident = "2024-03-15" -%}
 <!DOCTYPE html>
 <html>
   <head>
@@ -76,7 +75,7 @@ permalink: /
     </style>
 
     <script type="text/javascript">
-      var lastAtChannel = "{{ lastAtChannel }}";
+      var lastIncident = "{{ lastIncident }}";
 
       function getDiffInDaysFromNow(date) {
         var differenceMs = new Date().getTime() - date.getTime();
@@ -103,7 +102,7 @@ permalink: /
       }
 
       document.addEventListener('DOMContentLoaded', function (event) {
-        var days = getDiffInDaysFromNow(getDateObjectFromString(lastAtChannel));
+        var days = getDiffInDaysFromNow(getDateObjectFromString(lastIncident));
 
         updateDays(days);
       });
@@ -112,12 +111,8 @@ permalink: /
 
   <body>
     <section class="main">
-      <h1 class="header">{{ postTitle }}:</h1>
-
       <h2 id="days"
           class="days">0</h2>
-      
-      <footer class="footer">{{ notifiedPeople }} personas notificadas</footer>
     </section>
   </body>
 </html>
