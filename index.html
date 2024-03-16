@@ -3,13 +3,14 @@ permalink: /
 ---
 {%- assign postTitle = "Days without a Boeing incident" -%}
 {%- assign lastIncident = "2024-03-15" -%}
+{%- assign lastIncidentUrl = "https://www.nytimes.com/2024/03/15/business/united-missing-panel-oregon-san-francisco.html" -%}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="{{ postTitle }}">
-    <meta name="description" content="Último incidente: {{ lastAtChannel }}, personas notificadas: {{ notifiedPeople }}">
+    <meta name="description" content="Last incident: {{ lastIncident }}">
     <meta name="theme-color" content="#fd7177">
 
     <title>🚨 {{ postTitle }} 🚨</title>
@@ -44,32 +45,24 @@ permalink: /
       }
 
       body {
-        background-color: #fd7177;
+        /* From Boeing logo https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg */
+        background-color: #0033a1;
         color: white;
-        margin: 1rem;
+        margin: 0;
         font-family: "Helvetica Neue", Helvetica, sans-serif;
       }
 
       /* Global */
       .main {
-        margin-top: 2rem;
-        text-align: center;
-      }
-
-      .header,
-      .footer {
         margin: 0;
-        font-size: 2rem;
-        font-size: 7.5vh;
-        line-height: 7.5vh;
-        font-weight: 200;
+        text-align: center;
       }
 
       .days {
         margin: 0;
         font-size: 8rem;
-        font-size: 75vh;
-        line-height: 75vh;
+        font-size: 100vh;
+        line-height: 100vh;
         font-weight: 700;
       }
     </style>
@@ -111,8 +104,14 @@ permalink: /
 
   <body>
     <section class="main">
-      <h2 id="days"
-          class="days">0</h2>
+      <h1
+        class="days"
+      >
+        <a
+          id="days"
+          href="{{ lastIncidentUrl }}"
+        >0</a>
+      </h1>
     </section>
   </body>
 </html>
