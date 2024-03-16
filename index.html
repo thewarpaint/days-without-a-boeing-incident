@@ -47,7 +47,6 @@ permalink: /
       body {
         /* From Boeing logo https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg */
         background-color: #0033a1;
-        color: white;
         margin: 0;
         font-family: "Helvetica Neue", Helvetica, sans-serif;
       }
@@ -64,6 +63,13 @@ permalink: /
         font-size: 100vh;
         line-height: 100vh;
         font-weight: 700;
+      }
+
+      .days__link,
+      .days__link:hover,
+      .days__link:visited {
+        color: white;
+        text-decoration: underline solid white .25rem;
       }
     </style>
 
@@ -109,6 +115,7 @@ permalink: /
       >
         <a
           id="days"
+          class="days__link"
           href="{{ lastIncidentUrl }}"
         >0</a>
       </h1>
