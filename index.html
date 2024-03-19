@@ -71,6 +71,15 @@ permalink: /
         color: white;
         text-decoration: underline solid white .25rem;
       }
+
+      .previously {
+        font-family: "Roboto Mono", monospace;
+      }
+
+      .previously__link {
+        color: white;
+        text-decoration: underline solid white 1px;
+      }
     </style>
 
     <script type="text/javascript">
@@ -119,6 +128,21 @@ permalink: /
           href="{{ lastIncidentUrl }}"
         >0</a>
       </h1>
+
+      <ul class="previously">
+        <li>
+          2024-01-05,
+          Alaska Airlines,
+          AS1282,
+          <a
+            class="previously__link"
+            href="https://www.nytimes.com/2024/01/07/us/alaska-airlines-boeing-passengers.html"
+          >
+            door plug blows out of an airplane midflight causing a rapid decompression
+          </a>,
+          3 injured
+        </li>
+      </ul>
     </section>
   </body>
 </html>
