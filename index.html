@@ -47,6 +47,7 @@ permalink: /
       body {
         /* From Boeing logo https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg */
         background-color: #0033a1;
+        color: white;
         margin: 0;
         font-family: "Helvetica Neue", Helvetica, sans-serif;
       }
@@ -76,7 +77,9 @@ permalink: /
         font-family: "Roboto Mono", monospace;
       }
 
-      .previously__link {
+      .previously__link,
+      .previously__link:hover,
+      .previously__link:visited {
         color: white;
         text-decoration: underline solid white 1px;
       }
@@ -137,9 +140,7 @@ permalink: /
           <a
             class="previously__link"
             href="https://www.nytimes.com/2024/01/07/us/alaska-airlines-boeing-passengers.html"
-          >
-            door plug blows out of an airplane midflight causing a rapid decompression
-          </a>,
+          >door plug blows out of an airplane midflight causing a rapid decompression</a>,
           3 injured
         </li>
       </ul>
