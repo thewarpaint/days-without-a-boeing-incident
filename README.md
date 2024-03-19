@@ -1,1 +1,1 @@
-# Días sin @channel o @here innecesarios en #general
+# Days without a Boeing incident
