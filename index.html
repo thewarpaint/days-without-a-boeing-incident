@@ -4,6 +4,7 @@ permalink: /
 {%- assign postTitle = "Days without a Boeing incident" -%}
 {%- assign lastIncident = "2024-04-07" -%}
 {%- assign lastIncidentUrl = "https://www.cnbc.com/2024/04/07/boeing-engine-part-fell-off-during-southwest-flight-takeoff-faa.html" -%}
+{%- assign lastIncidentImageUrl = "img/2024-04-07-WN3695.jpg" -%}
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,8 +21,8 @@ permalink: /
           content="summary">
     <meta name="twitter:title"
           content="{{ postTitle }}">
-    <!-- <meta name="twitter:image"
-          content="{{ site.url }}/assets/images/..."> -->
+    <meta name="twitter:image"
+          content="{{ site.url }}/{{ lastIncidentImageUrl }}">
 
     <!-- Open Graph (Facebook) meta tags -->
     <meta property="og:title"
@@ -30,8 +31,8 @@ permalink: /
           content="article">
     <meta property="og:url"
           content="https://dayswithoutaboeingincident.com">
-    <!-- <meta property="og:image"
-          content="{{ site.url }}/assets/images/..."> -->
+    <meta property="og:image"
+          content="{{ site.url }}/{{ lastIncidentImageUrl }}">
 
     <style type="text/css">
       html {
@@ -47,7 +48,7 @@ permalink: /
       body {
         /* From Boeing logo https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg */
         background-color: #0033a1;
-        background-image: url('img/2024-04-07-WN3695.jpg');
+        background-image: url('{{ site.url }}/{{ lastIncidentImageUrl }}');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
